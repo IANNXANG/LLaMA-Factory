@@ -406,6 +406,13 @@ def get_template_and_fix_tokenizer(tokenizer: "PreTrainedTokenizer", data_args: 
 
     return template
 
+_register_template(
+    name="Math_reflect",
+    format_user=StringFormatter(slots=["{{content}}\n\nWait, did I make a mistake somewhere?\n\n"]),
+    format_separator=EmptyFormatter(slots=["\n\n"]),
+)
+
+
 
 _register_template(
     name="alpaca",
