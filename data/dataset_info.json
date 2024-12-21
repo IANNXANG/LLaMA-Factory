@@ -2,6 +2,9 @@
   "identity": {
     "file_name": "identity.json"
   },
+  "Math_reflect": {
+    "file_name": "Math_reflect.json"
+  },
   "alpaca_en_demo": {
     "file_name": "alpaca_en_demo.json"
   },

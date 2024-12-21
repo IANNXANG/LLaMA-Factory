@@ -4,19 +4,19 @@ model_name_or_path: /home/jovyan/share/LLMAgent/model/Llama-3.2-1B-Instruct
 ### method
 stage: sft
 do_train: true
-finetuning_type: lora
-lora_target: all
+finetuning_type: full
+deepspeed: examples/deepspeed/ds_z3_config.json  # choices: [ds_z0_config.json, ds_z2_config.json, ds_z3_config.json]
 
 ### dataset
-dataset: identity,alpaca_en_demo
-template: llama3
+dataset: Math_reflect
+template: Math_reflect
 cutoff_len: 2048
 max_samples: 1000
 overwrite_cache: true
 preprocessing_num_workers: 16
 
 ### output
-output_dir: saves/llama3-8b/lora/sft
+output_dir: /pubshare/zy/cache/LLMfactory/Math_reflect
 logging_steps: 10
 save_steps: 500
 plot_loss: true
@@ -24,8 +24,8 @@ overwrite_output_dir: true
 
 ### train
 per_device_train_batch_size: 1
-gradient_accumulation_steps: 8
-learning_rate: 1.0e-4
+gradient_accumulation_steps: 2
+learning_rate: 1.0e-5
 num_train_epochs: 3.0
 lr_scheduler_type: cosine
 warmup_ratio: 0.1
@@ -37,6 +37,3 @@ val_size: 0.1
 per_device_eval_batch_size: 1
 eval_strategy: steps
 eval_steps: 500
-
-report_to: wandb
-run_name: test_run # 可选
