@@ -8,7 +8,7 @@ finetuning_type: full
 deepspeed: examples/deepspeed/ds_z3_config.json  # choices: [ds_z0_config.json, ds_z2_config.json, ds_z3_config.json]
 
 ### dataset
-dataset: Math_reflect
+dataset: Math_reflect_train
 template: Math_reflect
 cutoff_len: 2048
 max_samples: 1000
@@ -16,7 +16,7 @@ overwrite_cache: true
 preprocessing_num_workers: 16
 
 ### output
-output_dir: /pubshare/zy/SFT_OUTPUT
+output_dir: /pubshare/zy/SFT_OUTPUT/train
 logging_steps: 10
 save_steps: 500
 plot_loss: true

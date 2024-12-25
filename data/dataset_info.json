@@ -14,6 +14,19 @@
   "Math_reflect_train_v2": {
     "file_name": "Math_reflect_train_v2.json"
   },
+  "Math_reflect_train_TF": {
+    "file_name": "Math_reflect_train_TF.json"
+  },
+  "Math_reflect_test_TF": {
+    "file_name": "Math_reflect_test_TF.json"
+  },
+  "Math_train": {
+    "file_name": "Math_train.json"
+  },
+  "Math_test": {
+    "file_name": "Math_test.json"
+  },
+  
   "alpaca_en_demo": {
     "file_name": "alpaca_en_demo.json"
   },
