@@ -408,7 +408,7 @@ def get_template_and_fix_tokenizer(tokenizer: "PreTrainedTokenizer", data_args: 
 
 _register_template(
     name="Math_reflect",
-    format_user=StringFormatter(slots=["{{content}}\n\nWait, did I make a mistake somewhere?\n\n"]),
+    format_user=StringFormatter(slots=["{{content}}"]),
     format_separator=EmptyFormatter(slots=["\n\n"]),
 )
 
